@@ -23,12 +23,12 @@ body {
 /*------------------------General Classe------------------*/
 
 .container {
-  max-width: 1500px;
+  max-width: 1400px;
   padding: 0 20px;
   margin: auto;
 }
 
-/*-------------------------Nav BAr-----------------------*/
+/*-------------------------Nav Bar-----------------------*/
 
 .navbar {
   background: var(--background-3);
@@ -77,6 +77,41 @@ body {
   margin-top: 50px;
 }
 
+.profile,
+.skills-block,
+.resume-block,
+.contact-and-links,
+.project-summary,
+.project-name,
+.projects-heading {
+  border-radius: 16px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.profile:hover,
+.skills-block:hover,
+.resume-block:hover,
+.contact-and-links:hover,
+.project-summary:hover,
+.project-name:hover,
+.project-description:hover,
+.project-gif:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.project-description,
+.project-gif {
+  border-radius: 16px 16px 0 0;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.project-gif img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  max-height: 420px;
+}
 .profile {
   background: var(--background-1);
   padding: 20px;
@@ -88,9 +123,13 @@ body {
   gap: 10px;
 }
 
+.profile-pic {
+  height: 100%;
+}
+
 .profile-pic img {
+  height: 100%;
   width: 100%;
-  height: 300px;
   object-fit: cover;
 }
 
@@ -108,6 +147,7 @@ body {
   background: var(--background-1);
   padding: 20px;
   color: var(--font-color-1);
+  width: 100%;
 }
 
 .skills-list {
@@ -130,10 +170,14 @@ body {
 
 .resume-block {
   padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .resume {
   background: #545455;
   padding: 20px;
+  width: 100%;
 }
 .contact-and-links {
   width: 100%;
@@ -174,7 +218,20 @@ body {
 .project-summary-pic {
   margin-top: 20px;
 }
+.project-summary-pic img {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+.project-name-2 {
+  grid-column: 3;
+  grid-row: 1;
+}
 
+.project-description-1 {
+  grid-column: 2;
+}
 /*-----------------------------Projects-section------------------*/
 
 .projects-section {
@@ -200,6 +257,7 @@ body {
 .project {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 3.5fr;
   gap: 10px;
   margin-top: 30px;
   padding: 0 10px;
@@ -209,6 +267,7 @@ body {
 .project-gif {
   background: var(--background-1);
   padding: 20px;
+  grid-row: 1 / span 2;
 }
 
 .project-details {
@@ -222,6 +281,10 @@ body {
   color: var(--font-color-1);
   padding: 20px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .project-name a {
@@ -232,10 +295,71 @@ body {
   padding: 20px;
   gap: 20px;
   text-align: center;
+  width: 100%;
 }
 
 .project-description {
   background: var(--background-1);
   padding: 20px;
   color: var(--font-color-1);
+}
+
+.project-description ul {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width: 998px) {
+  .section-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.5fr 2.5fr 0.5fr;
+  }
+  .skills-and-resume {
+    grid-row: 3;
+  }
+
+  .project-summary {
+    grid-column: 1 / span 2;
+  }
+  .skills-and-resume {
+    flex-direction: row;
+    grid-column: 1 / span 2;
+  }
+
+  .project {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 3fr 2fr;
+  }
+
+  .project-gif {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    max-height: 400px;
+  }
+  .project-name-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .project-description-1 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .project-name-2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .project-description-2 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .nav-bar-list,
+  .nav-bar-items {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-summary-pic img {
+    max-height: 400px;
+  }
 }
