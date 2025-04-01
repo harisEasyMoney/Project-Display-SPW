@@ -22,3 +22,25 @@ function changeImage() {
 }
 
 changeImage();
+
+document.getElementById("resume").addEventListener("click", function () {
+  window.open("/dummy assets/rules.pdf", "_blank");
+});
+
+const options = {
+  root: null,
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+document.querySelectorAll(".project").forEach((project) => {
+  observer.observe(project);
+});
