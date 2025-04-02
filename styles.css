@@ -12,7 +12,6 @@ html {
 }
 body {
   background: rgba(115, 115, 116, 255);
-  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -426,16 +425,38 @@ li {
   }
   .nav-bar-list,
   .nav-bar-items {
-    position: static;
     display: flex;
     flex-direction: column;
   }
+
+  .nav-bar-list {
+    position: static;
+    flex-direction: row;
+    transform: translate(0);
+  }
+
   .project-summary-pic img {
     max-height: 400px;
+  }
+  .nav-bar-items span {
+    display: none;
   }
 }
 
 @media (max-width: 550px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 12px;
+  }
   .section-1 {
     display: flex;
     flex-direction: column;
