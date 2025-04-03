@@ -108,7 +108,7 @@ li {
 .project-summary,
 .project-name,
 .projects-heading {
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
 }
@@ -125,7 +125,7 @@ li {
 }
 .project-description,
 .project-gif {
-  border-radius: 16px 16px 0 0;
+  border-radius: 8px 8px 0 0;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
 }
@@ -209,6 +209,9 @@ li {
   padding: 20px;
   width: 100%;
   transition: all 0.3s;
+}
+.resume a {
+  text-decoration: none;
 }
 
 .resume:hover {

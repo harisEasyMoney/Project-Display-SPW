@@ -23,10 +23,6 @@ function changeImage() {
 
 changeImage();
 
-document.getElementById("resume").addEventListener("click", function () {
-  window.open("/dummy assets/rules.pdf", "_blank");
-});
-
 const options = {
   root: null,
   threshold: 0.1,
