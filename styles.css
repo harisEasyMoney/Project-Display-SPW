@@ -60,7 +60,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
+  padding: 15px 5px;
 }
 
 .nav-bar-list,
@@ -297,7 +297,8 @@ li {
   color: var(--font-color-1);
   text-align: center;
   padding: 15px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   position: absolute;
   top: -30px;
   left: 50%;
